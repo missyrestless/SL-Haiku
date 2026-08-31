@@ -139,8 +139,8 @@ default
         five_size = llGetListLength(five);
 
         llSay(0, "Second Life Haiku Generator version " + VERSION);
-        llSay(0, "Created by Missy Restless Angel " + PROFILE);
-        llSay(0, "The Second Life Haiku master is ready...");
+        llSay(0, "Created by " + PROFILE);
+        llSay(0, "\nThe Second Life Haiku master is ready...");
     }
 
     touch_start(integer total_number) {
