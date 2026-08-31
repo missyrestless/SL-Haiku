@@ -125,7 +125,8 @@ string makehaiku3() {
 default
 {
     state_entry() {
-        string PROFILE = "https://world.secondlife.com/resident/3506213c-29c8-4aa1-a38f-e12f6d41b804";
+        // string PROFILE = "https://world.secondlife.com/resident/3506213c-29c8-4aa1-a38f-e12f6d41b804";
+        string PROFILE = "secondlife:///app/agent/3506213c-29c8-4aa1-a38f-e12f6d41b804/about";
 
         noun_size = llGetListLength(nouns);
         verb_size = llGetListLength(verbs);
