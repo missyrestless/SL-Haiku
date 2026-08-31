@@ -138,8 +138,7 @@ default
         four_size = llGetListLength(four);
         five_size = llGetListLength(five);
 
-        llSay(0, "Second Life Haiku Generator version " + VERSION);
-        llSay(0, "Created by " + PROFILE);
+        llSay(0, "\nSecond Life Haiku Generator version " + VERSION + "\nCreated by " + PROFILE);
         llSay(0, "\nThe Second Life Haiku master is ready...");
     }
 
