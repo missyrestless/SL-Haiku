@@ -17,5 +17,5 @@ make
   mkdir -p ${DEST}
 
   cp slhaiku.lslo ${DEST}/slhaiku.lsl
-  cp COPYRIGHT LICENSE ${DEST}
+  cp COPYRIGHT INSTRUCTIONS LICENSE ${DEST}
 }

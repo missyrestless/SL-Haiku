@@ -43,8 +43,9 @@ make clean
 make
 [ -x trim_lslo ] && ./trim_lslo
 
-PRODUCT="Discord_IM_Online_Tracker"
+PRODUCT="Second_Life_Haiku"
 tar cf - *.lslo *.lsl \
+         INSTRUCTIONS \
          LICENSE \
          COPYRIGHT \
          VERSION | gzip -9 > ${PRODUCT}-${VERSION}.tar.gz
