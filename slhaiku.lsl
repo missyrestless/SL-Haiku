@@ -41,18 +41,20 @@ string makehaiku1() {
         if (y % 2 == 1) {
             y--;
         }
-        if (nouns[x+1] + adj[y+1] == 5) {
-            haiku1 = adj[y] + " " + nouns[x];
+        integer nind = (integer)llList2String(nouns, x + 1);
+        integer yind = (integer)llList2String(adj, y + 1);
+        if ((nind + yind) == 5) {
+            haiku1 = llList2String(adj, y) + " " + llList2String(nouns, x);
             running = FALSE;
-        } else if (1 + nouns[x+1] + adj[y+1] == 5) {
-            haiku1 = "The " + adj[y] + " " + nouns[x];
+        } else if ((1 + nind + yind) == 5) {
+            haiku1 = "The " + llList2String(adj, y) + " " + llList2String(nouns, x);
             running = FALSE;
         }
     }
     return haiku1;
 }
 
-makehaiku2() {
+string makehaiku2() {
     integer running = TRUE;
     string haiku2 = "";
 
@@ -65,15 +67,17 @@ makehaiku2() {
         if (z % 2 == 1) {
             z--;
         }
-        haiku2 = verbs[a] + " " + adv[z];
-        if (verbs[a+1] + adv[z+1] == 7) {
+        integer aind = (integer)llList2String(verbs, a + 1);
+        integer zind = (integer)llList2String(adv, z + 1);
+        if ((aind + zind) == 7) {
+            haiku2 = llList2String(verbs, a) + " " + llList2String(adv, z);
             running = FALSE;
         }
     }
     return haiku2;
 }
 
-makehaiku3() {
+string makehaiku3() {
     integer x;
     string foobar;
     string haiku3 = "";
@@ -81,29 +85,26 @@ makehaiku3() {
     integer y = (integer)llFrand((float)adj_size);
     if (y % 2 == 1) {
         y--;
-        }
-    if (adj[y+1] == 0) {
+    }
+    integer yind = (integer)llList2String(adj, y + 1);
+    if (yind == 0) {
         x = (integer)llFrand((float)five_size);
-            foobar = five[x];
-        }
-    else if (adj[y+1] == 1) {
+        foobar = llList2String(five, x);
+    } else if (yind == 1) {
         x = (integer)llFrand((float)four_size);
-            foobar = four[x];
-        }
-    else if (adj[y+1] == 2) {
+        foobar = llList2String(four, x);
+    } else if (yind == 2) {
         x = (integer)llFrand((float)three_size);
-            foobar = three[x];
-        }
-    else if (adj[y+1] == 3) {
+        foobar = llList2String(three, x);
+    } else if (yind == 3) {
         x = (integer)llFrand((float)two_size);
-            foobar = two[x];
-        }
-    else if (adj[y+1] == 4) {
+        foobar = llList2String(two, x);
+    } else if (yind == 4) {
         x = (integer)llFrand((float)one_size);
-            foobar = one[x];
-        }
-        haiku3 = foobar + " " + adj[y];
-        return haiku3;
+        foobar = llList2String(one, x);
+    }
+    haiku3 = foobar + " " + llList2String(adj, y);
+    return haiku3;
 }
 
 default
