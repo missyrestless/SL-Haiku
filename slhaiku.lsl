@@ -18,16 +18,26 @@ list three = ["vibrantly", "totally", "serenely", "seemingly", "it is so"];
 list four = ["absolutely", "virtually", "incredibly"];
 list five = ["Second Life Haiku!"];
 
+integer noun_size;
+integer verb_size;
+integer adj_size;
+integer adv_size;
+integer one_size;
+integer two_size;
+integer three_size;
+integer four_size;
+integer five_size;
+
 string makehaiku1() {
     integer running = TRUE;
     string haiku1 = "";
 
     while (running) {
-        integer x = mt_rand(0, count(nouns) - 1);
+        integer x = (integer)llFrand((float)noun_size);
         if (x % 2 == 1) {
             x--;
         }
-        integer y = mt_rand(0, count(adj) - 1);
+        integer y = (integer)llFrand((float)adj_size);
         if (y % 2 == 1) {
             y--;
         }
@@ -47,11 +57,11 @@ makehaiku2() {
     string haiku2 = "";
 
     while (running) {
-        integer a = mt_rand(0, count(verbs) - 1);
+        integer a = (integer)llFrand((float)verb_size);
         if (a % 2 == 1) {
             a--;
         }
-        integer z = mt_rand(0, count(adv) - 1);
+        integer z = (integer)llFrand((float)adv_size);
         if (z % 2 == 1) {
             z--;
         }
@@ -68,28 +78,28 @@ makehaiku3() {
     string foobar;
     string haiku3 = "";
 
-    integer y = mt_rand(0, count(adj) - 1);
+    integer y = (integer)llFrand((float)adj_size);
     if (y % 2 == 1) {
         y--;
         }
     if (adj[y+1] == 0) {
-        x = mt_rand(0, count(five) - 1);
+        x = (integer)llFrand((float)five_size);
             foobar = five[x];
         }
     else if (adj[y+1] == 1) {
-        x = mt_rand(0, count(four) - 1);
+        x = (integer)llFrand((float)four_size);
             foobar = four[x];
         }
     else if (adj[y+1] == 2) {
-        x = mt_rand(0, count(three) - 1);
+        x = (integer)llFrand((float)three_size);
             foobar = three[x];
         }
     else if (adj[y+1] == 3) {
-        x = mt_rand(0, count(two) - 1);
+        x = (integer)llFrand((float)two_size);
             foobar = two[x];
         }
     else if (adj[y+1] == 4) {
-        x = mt_rand(0, count(one) - 1);
+        x = (integer)llFrand((float)one_size);
             foobar = one[x];
         }
         haiku3 = foobar + " " + adj[y];
@@ -99,6 +109,15 @@ makehaiku3() {
 default
 {
     state_entry() {
+        noun_size = llGetListLength(nouns);
+        verb_size = llGetListLength(verbs);
+        adj_size = llGetListLength(adj);
+        adv_size = llGetListLength(adv);
+        one_size = llGetListLength(one);
+        two_size = llGetListLength(two);
+        three_size = llGetListLength(three);
+        four_size = llGetListLength(four);
+        five_size = llGetListLength(five);
         llSay(0,"The Second Life Haiku master is ready...");
     }
 
