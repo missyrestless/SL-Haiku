@@ -125,6 +125,8 @@ string makehaiku3() {
 default
 {
     state_entry() {
+        string PROFILE = "https://world.secondlife.com/resident/3506213c-29c8-4aa1-a38f-e12f6d41b804";
+
         noun_size = llGetListLength(nouns);
         verb_size = llGetListLength(verbs);
         adj_size = llGetListLength(adj);
@@ -134,10 +136,10 @@ default
         three_size = llGetListLength(three);
         four_size = llGetListLength(four);
         five_size = llGetListLength(five);
-        llSay(0, "\nSecond Life Haiku Generator version " + VERSION);
-        llSay(0, "\nCreated by Missy Restless Angel ( https://world.secondlife.com/resident/3506213c-29c8-4aa1-a38f-e12f6d41b804
- )");
-        llSay(0, "\n\nThe Second Life Haiku master is ready...");
+
+        llSay(0, "Second Life Haiku Generator version " + VERSION);
+        llSay(0, "Created by Missy Restless Angel " + PROFILE);
+        llSay(0, "The Second Life Haiku master is ready...");
     }
 
     touch_start(integer total_number) {
