@@ -15,9 +15,9 @@ The Second Life Haiku Generator is extremely low lag: a single script in a singl
 
 The Second Life Haiku Generator can be deployed as:
 
-- A rezzed object users can touch
+✅ A rezzed object users can touch
   - Requires rez rights on land
-- Worn as a HUD by the owner
+✅ Worn as a HUD by the owner
   - No rez rights are required
   - Only the owner will be able to generate haikus
 
@@ -36,40 +36,40 @@ The Second Life Haiku Generator can be deployed as a rezzed object in-world or a
 Rezzable Object
 ----------------
 
-- Purchase the Second Life Haiku Generator on the Second Life Marketplace
-- Rez the 'Second Life Haiku (rez me)' object
+✅ Purchase the Second Life Haiku Generator on the Second Life Marketplace
+✅ Rez the 'Second Life Haiku (rez me)' object
   - You must have rez rights on the land
   - If you do not have rez rights, go to a Sandbox
   - Drag and drop the 'Second Life Haiku (rez me)' object from your inventory onto the ground
-- Position the Second Life Haiku object
+✅ Position the Second Life Haiku object
   - Right click the rezzed Second Life Haiku object
   - Select 'Edit'
   - Select 'Move' in the Edit window
   - Use the arrows to move the Haiku Generator
   - Hold the 'Ctrl' key down to rotate the Haiku Generator
   - Close the 'Edit' window
-- Click the rezzed Second Life Haiku object
+✅ Click the rezzed Second Life Haiku object
   - A random haiku will be displayed in public chat
   - Click again for a new haiku
 
 Owner HUD
 ----------
 
-- Purchase the Second Life Haiku Generator on the Second Life Marketplace
-- Add the Second Life Haiku HUD
+✅ Purchase the Second Life Haiku Generator on the Second Life Marketplace
+✅ Add the Second Life Haiku HUD
   - No rez rights required, can be used anywhere scripts are enabled
   - Double click the 'Second Life Haiku HUD (add me)' object in your inventory
     - Or right click the object in your inventory and select 'Add'
-- Position the Second Life Haiku HUD if needed
+✅ Position the Second Life Haiku HUD if needed
   - Right click the worn 'Second Life Haiku HUD (add me)' in your inventory
   - Select 'Edit'
   - Select 'Move' in the Edit window
   - Use the arrows to move the Second Life Haiku HUD on your screen
   - Close the 'Edit' window
-- Click the worn Second Life Haiku HUD
+✅ Click the worn Second Life Haiku HUD
   - A random haiku will be displayed in public chat
   - Click again for a new haiku
-- Right click the Second Life Haiku HUD and select 'Detach' to detach the HUD
+✅ Right click the Second Life Haiku HUD and select 'Detach' to detach the HUD
 
 Github Repository
 ------------------
