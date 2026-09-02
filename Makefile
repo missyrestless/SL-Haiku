@@ -44,4 +44,6 @@ setvars:
 
 release: setvars all
 
+test: all clean
+
 .PHONY : all clean optimized setvars release

@@ -19,18 +19,206 @@
 
 string VERSION = "1.0.2";
 
-list nouns = ["viewer", "2", "silks", "1", "skybox", "2", "RL", "2", "SL", "2", "sandbox", "2", "lag", "1", "hovertext", "3", "hud", "1", "bling", "1", "neko", "2", "AO", "2", "attachment", "3", "pixel", "2", "pixels", "2", "freebie", "2", "SL Marketplace", "5", "tier", "1", "landmark", "2", "SL blogger", "4", "gesture", "2", "DJ", "2", "hostess", "2", "chat bot", "2", "tiny", "2", "invisiprim", "4", "furry", "2", "vampire", "2", "mouselook", "2", "Gor", "1", "money tree", "3", "virtual world", "4", "alt", "1", "griefer", "2", "flying car", "3", "camping chair", "3", "sculpted prim", "3", "flexi prim", "3", "flexi hair", "3", "prim", "1", "welcome center", "4", "orient island", "5", "Linden Lab", "3", "Linden", "2", "inner core", "3", "pose ball", "2", "avatar", "3", "avatars", "3", "sim", "1", "script", "1", "hardware lighting", "4", "Resident", "3", "Linden dollar", "4", "Mainland", "2", "Private Island", "4", "Homestead", "2", "grid", "1", "region", "2", "parcel", "2", "CopyBot", "3", "Firestorm", "2", "Zindra", "2"];
+list nouns = [
+    "abuse report", "4",
+    "maturity rating", "6",
+    "age verification", "6",
+    "Destination Guide", "5",
+    "Knowledge Base", "3",
+    "display name", "3",
+    "draw distance", "3",
+    "inventory", "4",
+    "event", "2",
+    "facelight", "2",
+    "viewer", "2",
+    "alpha", "2",
+    "silks", "1",
+    "skybox", "2",
+    "RL", "2",
+    "SL", "2",
+    "sandbox", "2",
+    "lag", "1",
+    "hovertext", "3",
+    "HUD", "1",
+    "bling", "1",
+    "neko", "2",
+    "AO", "2",
+    "attachment", "3",
+    "pixel", "2",
+    "pixels", "2",
+    "freebie", "2",
+    "SL Marketplace", "5",
+    "tier", "1",
+    "landmark", "2",
+    "SL blogger", "4",
+    "gesture", "2",
+    "DJ", "2",
+    "hostess", "2",
+    "chat bot", "2",
+    "Tiny", "2",
+    "invisiprim", "4",
+    "furry", "2",
+    "vampire", "2",
+    "mouselook", "2",
+    "Gor", "1",
+    "money tree", "3",
+    "virtual world", "4",
+    "alt", "1",
+    "griefer", "2",
+    "flying car", "3",
+    "camping chair", "3",
+    "sculpted prim", "3",
+    "flexi prim", "3",
+    "flexi hair", "3",
+    "prim", "1",
+    "welcome center", "4",
+    "orient island", "5",
+    "Linden Lab", "3",
+    "Linden", "2",
+    "inner core", "3",
+    "pose ball", "2",
+    "Avatar", "3",
+    "avatars", "3",
+    "sim", "1",
+    "script", "1",
+    "hardware lighting", "4",
+    "Resident", "3",
+    "Linden dollar", "4",
+    "Mainland", "2",
+    "Private Island", "4",
+    "Homestead", "2",
+    "grid", "1",
+    "region", "2",
+    "parcel", "2",
+    "CopyBot", "3",
+    "Firestorm", "2",
+    "Zindra", "2"
+];
 
-list verbs = ["TP", "2", "teleport", "3", "stream", "1", "partner", "2", "IM", "2", "age verify", "4", "emote", "2", "accessorize", "4", "rez", "1", "Being Ruthed", "3", "Ruthed", "1", "Building", "2", "Scripting", "2", "Editing", "3", "Chatting", "2", "Lagging", "2", "Flying", "2", "Building together", "5", "Cybering", "3", "Teleporting", "4", "Pose balling", "3", "Editing appearance", "6", "Exploring", "3", "Griefing", "2", "Rebaking", "2", "Uploading", "2", "Editing profile", "5", "Creating outfits", "5"];
+list verbs = [
+    "add", "1",
+    "fly", "1",
+    "reset", "2",
+    "block", "1",
+    "build", "1",
+    "deed", "1",
+    "attach", "2",
+    "detach", "2",
+    "delete", "2",
+    "TP", "2",
+    "teleport", "3",
+    "stream", "1",
+    "partner", "2",
+    "IM", "2",
+    "age verify", "4",
+    "emote", "2",
+    "accessorize", "4",
+    "rez", "1",
+    "Being Ruthed", "3",
+    "Ruthed", "1",
+    "building", "2",
+    "scripting", "2",
+    "Editing", "3",
+    "Chatting", "2",
+    "Lagging", "2",
+    "Flying", "2",
+    "building together", "5",
+    "Cybering", "3",
+    "Teleporting", "4",
+    "Pose balling", "3",
+    "Editing appearance", "6",
+    "Exploring", "3",
+    "Gesturbating", "4",
+    "Griefing", "2",
+    "Rebaking", "2",
+    "Uploading", "2",
+    "Editing profile", "5",
+    "Creating outfits", "5"
+];
 
-list adv = ["inworld", "2", "earlier", "3", "everywhere", "3", "frequently", "3", "in the Metaverse", "5", "slowly", "2", "graphicly", "3", "dazzlingly", "3", "dreamily", "3", "well", "1", "once", "1", "less", "1", "twice", "1", "in the air", "3", "quickly", "2", "very quickly", "4", "", "0", "with great speed", "3", "virtually", "4", "vivaciously", "4", "visually", "4"];
+list adv = [
+    "inworld", "2",
+    "earlier", "3",
+    "everywhere", "3",
+    "frequently", "3",
+    "in the Metaverse", "5",
+    "slowly", "2",
+    "graphicly", "3",
+    "dazzlingly", "3",
+    "dreamily", "3",
+    "well", "1",
+    "once", "1",
+    "less", "1",
+    "twice", "1",
+    "in the air", "3",
+    "quickly", "2",
+    "very quickly", "4",
+    "", "0",
+    "with great speed", "3",
+    "virtually", "4",
+    "vivaciously", "4",
+    "visually", "4"
+];
 
-list adj = ["anonymous", "4", "adorable", "4", "adventurous", "4", "fullperm", "2", "afk", "3", "dancing", "2", "gorean", "3", "virtuous", "3", "ecstatic", "3", "fabulous", "3", "so gorgeous", "3", "sexy cool", "3", "lonely", "2", "cool", "1", "baked", "1", "brave", "1", "nude", "1", "worn", "1", "electric", "3", "stunning", "2", "creepy", "2", "dashing", "2", "glowing", "2", "beautiful", "3", "colorful", "3", "", "0"];
+list adj = [
+    "anonymous", "4",
+    "adorable", "4",
+    "adventurous", "4",
+    "full perm", "2",
+    "AFK", "3",
+    "dancing", "2",
+    "gorean", "3",
+    "virtuous", "3",
+    "ecstatic", "3",
+    "fabulous", "3",
+    "so gorgeous", "3",
+    "sexy cool", "3",
+    "lonely", "2",
+    "cool", "1",
+    "baked", "1",
+    "brave", "1",
+    "nude", "1",
+    "worn", "1",
+    "electric", "3",
+    "stunning", "2",
+    "creepy", "2",
+    "dashing", "2",
+    "glowing", "2",
+    "beautiful", "3",
+    "colorful", "3",
+    "", "0"
+];
 
-list one = ["how", "once", "quite", "so"];
-list two = ["aptly", "always", "boldly", "fiercely", "they are", "it is"];
-list three = ["vibrantly", "totally", "serenely", "seemingly", "it is so"];
-list four = ["absolutely", "virtually", "incredibly"];
+list one = [
+    "how",
+    "once",
+    "quite",
+    "so"
+];
+
+list two = [
+    "aptly",
+    "always",
+    "boldly",
+    "fiercely",
+    "they are",
+    "it is"
+];
+
+list three = [
+    "vibrantly",
+    "totally",
+    "serenely",
+    "seemingly",
+    "it is so"
+];
+
+list four = [
+    "absolutely",
+    "virtually",
+    "incredibly"
+];
+
 list five = ["Second Life Haiku!"];
 
 integer noun_size;
