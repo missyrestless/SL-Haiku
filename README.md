@@ -10,8 +10,15 @@ The LSL script `SL-Haiku.lsl` is a Second Life haiku generator.
 
 When the object in which the script is running is touched, a haiku is generated and sent to public chat.
 
-Unlike it's predecessor, the Second Life haiku generator does not rely on a web service provided by a PHP script.
-Random haikus are generated solely by the LSL script without need for an HTTP request.
+The image used on the Second Life Haiku object is a painting by Kinkoku, Yokoi (1761-1832):
+A portrait of the poet [Matsuo Bashō](https://en.wikipedia.org/wiki/Matsuo_Bashō), with his
+most famous poem "An old pond - a frog jumps in -" (c.1686), from a collection of portraits
+of Bashō and his disciples along with their respective haiku poems. Haikai Gunsen No Zu
+('Portraits Of Haiku Poets'). The image is in the public domain.
+
+Unlike it's predecessors, most of which have ceased to function, the Second Life haiku
+generator does not rely on a web service provided by a PHP script. Random haikus are
+generated solely by the LSL script without need for an HTTP request.
 
 The Second Life Haiku Generator is extremely low lag: a single script in a single prim with no listen
 channels, no polling, no HTTP requests, no mesh, just a touch event. In addition to the low lag

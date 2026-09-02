@@ -9,7 +9,7 @@ The image used on the Second Life Haiku object is a painting by Kinkoku, Yokoi (
 
 When the object in which the script is running is touched, a haiku is generated and sent to public chat.
 
-Unlike it's predecessor, the Second Life haiku generator does not rely on a web service provided by a PHP script. Random haikus are generated solely by the LSL script without need for an HTTP request.
+Unlike it's predecessors, most of which have ceased to function, the Second Life haiku generator does not rely on a web service provided by a PHP script. Random haikus are generated solely by the LSL script without need for an HTTP request.
 
 The Second Life Haiku Generator is extremely low lag: a single script in a single prim with no listen channels, no polling, no HTTP requests, no mesh, just a touch event. In addition to the low lag architectural design, the Second Life Haiku Generator has been optimized with 'LSL-PyOptimizer' to further reduce memory usage and improve performance.
 
