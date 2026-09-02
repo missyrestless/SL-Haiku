@@ -61,12 +61,13 @@ list nouns = [
     "SL blogger", "4",
     "gesture", "2",
     "DJ", "2",
+    "host", "1",
     "hostess", "2",
     "chat bot", "2",
     "Tiny", "2",
     "invisiprim", "4",
-    "furry", "2",
-    "vampire", "2",
+    "Furry", "2",
+    "Vampire", "2",
     "mouselook", "2",
     "Gor", "1",
     "money tree", "3",
@@ -85,7 +86,7 @@ list nouns = [
     "Linden", "2",
     "inner core", "3",
     "pose ball", "2",
-    "Avatar", "3",
+    "avatar", "3",
     "avatars", "3",
     "sim", "1",
     "script", "1",
@@ -126,26 +127,24 @@ list verbs = [
     "emote", "2",
     "accessorize", "4",
     "rez", "1",
-    "Being Ruthed", "3",
-    "Ruthed", "1",
     "building", "2",
     "scripting", "2",
-    "Editing", "3",
-    "Chatting", "2",
-    "Lagging", "2",
-    "Flying", "2",
+    "editing", "3",
+    "chatting", "2",
+    "lagging", "2",
+    "flying", "2",
     "building together", "5",
-    "Cybering", "3",
-    "Teleporting", "4",
-    "Pose balling", "3",
-    "Editing appearance", "6",
-    "Exploring", "3",
-    "Gesturbating", "4",
-    "Griefing", "2",
-    "Rebaking", "2",
-    "Uploading", "2",
-    "Editing profile", "5",
-    "Creating outfits", "5"
+    "cybering", "3",
+    "teleporting", "4",
+    "pose balling", "3",
+    "editing appearance", "6",
+    "exploring", "3",
+    "gesturbating", "4",
+    "griefing", "2",
+    "rebaking", "2",
+    "uploading", "2",
+    "editing profile", "5",
+    "creating outfits", "5"
 ];
 
 list adv = [
@@ -165,11 +164,11 @@ list adv = [
     "in the air", "3",
     "quickly", "2",
     "very quickly", "4",
-    "", "0",
     "with great speed", "3",
     "virtually", "4",
     "vivaciously", "4",
-    "visually", "4"
+    "visually", "4",
+    "", "0"
 ];
 
 list adj = [
@@ -177,7 +176,7 @@ list adj = [
     "adorable", "4",
     "adventurous", "4",
     "full perm", "2",
-    "AFK", "3",
+    "afk", "3",
     "dancing", "2",
     "gorean", "3",
     "virtuous", "3",
@@ -266,6 +265,7 @@ string makehaiku1() {
             running = FALSE;
         }
     }
+    haiku1 = haiku1 + "\n";
     return haiku1;
 }
 
@@ -289,12 +289,13 @@ string makehaiku2() {
             running = FALSE;
         }
     }
+    haiku2 = haiku2 + "\n";
     return haiku2;
 }
 
 string makehaiku3() {
     integer x;
-    string foobar;
+    string tmpstr;
     string haiku3 = "";
 
     integer y = (integer)llFrand((float)adj_size);
@@ -304,28 +305,27 @@ string makehaiku3() {
     integer yind = (integer)llList2String(adj, y + 1);
     if (yind == 0) {
         x = (integer)llFrand((float)five_size);
-        foobar = llList2String(five, x);
+        tmpstr = llList2String(five, x);
     } else if (yind == 1) {
         x = (integer)llFrand((float)four_size);
-        foobar = llList2String(four, x);
+        tmpstr = llList2String(four, x);
     } else if (yind == 2) {
         x = (integer)llFrand((float)three_size);
-        foobar = llList2String(three, x);
+        tmpstr = llList2String(three, x);
     } else if (yind == 3) {
         x = (integer)llFrand((float)two_size);
-        foobar = llList2String(two, x);
+        tmpstr = llList2String(two, x);
     } else if (yind == 4) {
         x = (integer)llFrand((float)one_size);
-        foobar = llList2String(one, x);
+        tmpstr = llList2String(one, x);
     }
-    haiku3 = foobar + " " + llList2String(adj, y);
+    haiku3 = tmpstr + " " + llList2String(adj, y) + "\n";
     return haiku3;
 }
 
 default
 {
     state_entry() {
-        // string PROFILE = "https://world.secondlife.com/resident/3506213c-29c8-4aa1-a38f-e12f6d41b804";
         string PROFILE = "secondlife:///app/agent/3506213c-29c8-4aa1-a38f-e12f6d41b804/about";
 
         noun_size = llGetListLength(nouns);
@@ -343,7 +343,7 @@ default
     }
 
     touch_start(integer total_number) {
-        string haiku = "A Second Life Haiku:\n\n" + makehaiku1() + "\n" + makehaiku2() + "\n" + makehaiku3();
+        string haiku = "A Second Life Haiku:\n\n" + makehaiku1() + makehaiku2() + makehaiku3();
         llSay(0, haiku);
     }
 
