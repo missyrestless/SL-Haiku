@@ -16,6 +16,6 @@ make
   rm -rf ${DEST}
   mkdir -p ${DEST}
 
-  cp slhaiku.lslo ${DEST}/slhaiku.lsl
+  cp SL-Haiku.lslo ${DEST}/SL-Haiku.lsl
   cp COPYRIGHT INSTRUCTIONS LICENSE ${DEST}
 }

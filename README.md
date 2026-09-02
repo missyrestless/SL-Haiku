@@ -1,6 +1,6 @@
 # Second Life Haiku
 
-The LSL script `slhaiku.lsl` is a Second Life haiku generator.
+The LSL script `SL-Haiku.lsl` is a Second Life haiku generator.
 
 <table>
   <tr>
@@ -77,7 +77,7 @@ or as a HUD to be worn by the owner. Or both.
 
 ## License
 
-The `slhaiku.lsl` script is licensed under the terms and conditions of the GNU Public License version 3 (GPLv3).
+The `SL-Haiku.lsl` script is licensed under the terms and conditions of the GNU Public License version 3 (GPLv3).
 You may copy, modify, and redistribute this script under those terms. Any derivative work must also be
 published under the terms of the GPLv3 or later license. That is, if you modify and distribure your own
 version of this script then you must also make it available under this license.

@@ -17,7 +17,7 @@
 // --------------------
 // - 31-Aug-2026 Rewrite, perform generation in LSL rather than as a PHP web service
 
-string VERSION = "1.0.2";
+string VERSION = "1.0.3";
 
 list nouns = [
     "abuse report", "4",
@@ -25,10 +25,16 @@ list nouns = [
     "age verification", "6",
     "Destination Guide", "5",
     "Knowledge Base", "3",
+    "Terms of Service", "4",
     "display name", "3",
     "draw distance", "3",
     "inventory", "4",
     "event", "2",
+    "texture", "2",
+    "mesh", "1",
+    "pie menu", "3",
+    "particle", "3",
+    "notecard", "2",
     "facelight", "2",
     "viewer", "2",
     "alpha", "2",
@@ -38,6 +44,8 @@ list nouns = [
     "SL", "2",
     "sandbox", "2",
     "lag", "1",
+    "skin", "1",
+    "shape", "1",
     "hovertext", "3",
     "HUD", "1",
     "bling", "1",
@@ -88,20 +96,24 @@ list nouns = [
     "Private Island", "4",
     "Homestead", "2",
     "grid", "1",
+    "profile", "2",
     "region", "2",
     "parcel", "2",
     "CopyBot", "3",
     "Firestorm", "2",
+    "Windlight", "2",
     "Zindra", "2"
 ];
 
 list verbs = [
     "add", "1",
     "fly", "1",
+    "relog", "2",
     "reset", "2",
     "block", "1",
     "build", "1",
     "deed", "1",
+    "terraform", "3",
     "attach", "2",
     "detach", "2",
     "delete", "2",

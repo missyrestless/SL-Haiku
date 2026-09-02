@@ -43,6 +43,11 @@ make clean
 make
 [ -x trim_lslo ] && ./trim_lslo
 
+[ -f SL-Haiku.lslo ] || {
+  echo "ERROR; Cannot locate SL-Haiku.lslo"
+  exit 1
+}
+
 PRODUCT="Second_Life_Haiku"
 tar cf - *.lslo *.lsl \
          INSTRUCTIONS \
@@ -54,7 +59,7 @@ gh release create v${VERSION} ${DRAFT} \
                   --title "${ANNO}" \
                   --target "${BRANCH}" \
                   --notes-file README.md \
-                  slhaiku.lslo \
+                  SL-Haiku.lsl \
                   ${PRODUCT}-${VERSION}.tar.gz
 
 git fetch --tags origin
